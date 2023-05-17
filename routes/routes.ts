@@ -26,6 +26,8 @@ router.get("/get-posts", authMiddleware, getPosts);
 router.get("/get-by-user-id/:id", authMiddleware, getPostsByUserId);
 router.post("/create-post", authMiddleware, createPost);
 router.patch("/update-post", authMiddleware, updatePost);
+router.delete("/delete-post", authMiddleware, deletePost);
+
 
 // login
 router.post("/login", login);

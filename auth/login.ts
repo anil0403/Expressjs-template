@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { prisma } from "../config/prisma";
 import { compare } from "bcrypt";
-import  jwt  from "jsonwebtoken";
+import jwt from "jsonwebtoken";
 
 // Find user by email
 export const login = async (req: Request, res: Response) => {
@@ -11,6 +11,7 @@ export const login = async (req: Request, res: Response) => {
       email: email,
     },
   });
+  
   if (!user) {
     return res.status(401).json({ message: "Authentication failed" });
   }

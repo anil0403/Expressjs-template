@@ -13,16 +13,21 @@ import {
   updatePost,
 } from "../controllers/controllers";
 
+import { login } from "../auth/login";
+import { authMiddleware } from "../auth/middleware";
 // users
-router.get("/get-users", getUsers);
-router.get("/get-user-by-id/:id", getUserById);
+router.get("/get-users", authMiddleware, getUsers);
+router.get("/get-user-by-id/:id", authMiddleware, getUserById);
 router.post("/register", createUser);
-router.delete("/delete-user", deleteUser);
+router.delete("/delete-user", authMiddleware, deleteUser);
 
 // post
-router.get("/get-posts", getPosts);
-router.get("/get-by-user-id/:id", getPostsByUserId);
-router.post("/create-post", createPost);
-router.patch("/update-post", updatePost);
+router.get("/get-posts", authMiddleware, getPosts);
+router.get("/get-by-user-id/:id", authMiddleware, getPostsByUserId);
+router.post("/create-post", authMiddleware, createPost);
+router.patch("/update-post", authMiddleware, updatePost);
+
+// login
+router.post("/login", login);
 
 export default router;

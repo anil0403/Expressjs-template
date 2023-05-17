@@ -54,6 +54,22 @@ Running commands with npm `npm [command]`
 | :------ | :--------------------------------------- |
 | `start` | Starts a development instance of the app |
 
+## Available routes
+```shell
+  /login
+
+  /register
+  /get-users
+  /get-user-by-id/id
+  /delete-user
+
+  /create-post
+  /get-posts
+  /get-by-user-id/id
+  /update-post
+  /delete-post
+```
+
 ## Author
 
 👤 **Anil Shrestha**

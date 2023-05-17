@@ -6,9 +6,9 @@
   </a>
 </p>
 
-> A user authentication using json web token is implemented in this project
-> A project to learn user authentication in ExpressJS
-> APIs are tested using ## POSTMAN
+### A user authentication using json web token is implemented in this project
+### A project to learn user authentication in ExpressJS
+### APIs are tested using POSTMAN
 
 ## ExpressJS, mongoDB, prisma, jsonwebtoken, typescript, bcrypt
 
@@ -22,7 +22,7 @@ Features:
 ### Cloning the repository
 
 ```shell
-git https://github.com/anil0403/netflix-clone.git
+git clone https://github.com/anil0403/Expressjs-template.git
 ```
 
 ### Install packages
